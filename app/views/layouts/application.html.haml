@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title Shout
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body.page-grid
+    #page.layout-grid
+      - if menuall
+        %header
+        %nav= render "forums/forummenu"
+        #main-content.width4= yield
+        %nav= render "forums/forummenu"
+        %footer.clear
+          = session.inspect
+          -#= request.
+      - else
+        %header
+        #main-content.width4
+        %footer.clear
+          
+        
+        

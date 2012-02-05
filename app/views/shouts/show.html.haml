@@ -1,0 +1,17 @@
+%p#notice= notice
+.shout
+ %a{:href =>(url_for @shout.image_url)}
+  = image_tag(@shout.images.image_url(:thumb)) if @shout.images.image_url
+ .snotimage
+  = @shout.title if @shout.title
+  = @shout.thistoken if @shout.thistoken
+  - if @shout.sesskey == session[:session_id]  
+   = link_to 'Delete', shout_path(@shout),               |
+       :confirm => 'Are you sure?', :method => :delete   |
+  = sanitize(simple_format h(@shout.content))
+#comments
+ = render :partial => "shouts/childshout", |
+  :collection => @shout.children           |
+.form-general
+ = render "shouts/childform"
+= link_to 'Back', :back

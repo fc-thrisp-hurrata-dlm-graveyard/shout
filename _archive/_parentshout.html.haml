@@ -1,0 +1,23 @@
+.shout
+ %a{:href =>(url_for [@forum, parentshout])}
+  .shoutcontain
+   .stime
+    .time
+     = parentshout.created_at.try(:strftime,"%I:%M%p %B %d")
+   .simage
+    = image_tag(parentshout.image_url(:thumb)) if parentshout.image_url
+   .snotimage
+    .sinfobar
+     .stitle
+      = parentshout.title
+     .stripcode
+      = parentshout.thistoken
+     .smisc
+    .scontent
+     %p
+      = sanitize parentshout.content[0..500]+">"
+    .sblurbs
+     - parentshout.blurbchildren.each do |blurb|
+      .blurbs
+       = image_tag(blurb.image_url(:dthumb)) if blurb.image_url
+       = blurb.content[0..79]

@@ -1,0 +1,39 @@
+-- Version 0.0.6
+
+
+-- Version 0.0.5 (Summmmmeria)
+
+  clean up github
+  start working on post voting
+
+
+-- Version 0.0.4 (New Year)  1/1/11
+  
+- session based delete
+- very basic session based rate limiting (count & time)
+
+
+-- Version 0.0.3 (Renovations) 12/24/10
+
+- rewrite file names on upload 
+
+
+-- Version 0.0.2 (OneShout) 11/30/10
+
+- fixed partial rendering shouts error for strftime when shouts empty
+- collapsed Shout/Comment models into one Shout model (but still too verbose, could remove :istop from model)
+- basic tripcode functionality
+- css cleanup for shouts
+- started/added devise functionality
+
+
+-- Version 0.0.1 (Baseline) 11/01/10
+
+Cleanup and CSS 
+
+
+-- Version 0.0.0 (Go) 10/26/2010
+
+Basic construction and functionality: Creation and formatting of Forums, shouts, and comments
+
+

@@ -1,0 +1,8 @@
+-#-if @shouts
+-#= form_for(@shouts,:url=>remove_shout_path) do |f|
+-#  .actions
+-#    = f.submit
+-#if @shout
+= form_for(@shout.destroy,:url=>remove_shout_path) do |f|
+  .actions
+    = f.submit

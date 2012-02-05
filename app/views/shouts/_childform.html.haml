@@ -1,0 +1,11 @@
+- if @shout.forum.frozen == "unfrozen"
+ = form_for(Shout.new, :url => shouts_path, :html => {:multipart => true}) do |f|
+  = f.password_field :password, :size => "20"
+  = f.text_field :title, :size => "20"
+  = f.text_area :content, :size => "20x10"
+  = f.file_field :image
+  -#= f.hidden_field :istop, :value => "child"
+  = f.hidden_field :parent_id, :value => @shout.id
+  = f.hidden_field :forum_name, :value => @shout.forum_name
+  .actions
+   = f.submit

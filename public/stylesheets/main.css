@@ -1,0 +1,234 @@
+/********************** layout **********************/
+
+/**main**/
+#page		  {width: 990px; padding: 0 18px; margin: 0 auto;/*border:1px solid red;*/}
+.layout-grid  {background-position: 18px 1px !important;}
+.form-general {/*border:1px dashed orange*/;margin:auto;width:30%;overflow:auto;padding:5px;}
+#main-content {height:75%}
+header        {}
+footer        {}
+nav           {}
+#comments     {}
+.clear { clear: both; }
+
+
+/**links**/
+
+a {text-decoration: none;color:black;}
+a:link {}
+a:visited {}
+a:active {}
+a:hover {}
+
+/**unique**/
+
+.shouts{
+height:100%;
+width:100%;
+border:1px solid blue;
+margin:auto;
+}
+      
+.shout{
+position:relative;
+border:1px solid white;
+/*border:1px solid blue;*/
+/*height:200px;*/
+margin:2px;
+width:100%;
+}
+
+.snotimage{
+/*position:relative;*/
+width:79%;
+/*height:99%;*/
+display:block;
+/*border:1px solid pink;*/
+float:right;
+/*left:-5px;
+top:-219px;*/
+margin-right:auto;
+margin-left:auto;
+}
+
+.shout:after, #comments .shout:after{
+content: ".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+.shout a{
+display: block;
+width: 100%;
+height: 100%;
+text-decoration: none;
+}
+
+#comments .snotimage{
+/*position:relative;*/
+width:86%;
+/*top:-122px;*/
+/*border:2px dotted red;*/
+}
+
+#comments .shout{
+/*height:123px;*/
+}
+
+#comments .simage{
+/*position:relative;
+height: 124px;*/
+float:left;
+width: 124px;
+/*top:-10px;
+left:100px;
+border:2px dotted red;*/
+}
+
+
+.scontent{
+margin:1px;
+margin-left:auto;
+margin-right:auto;
+width:99%;
+/*border:1px dashed purple;*/
+/*top:-195px;*/
+}
+
+.sinfobar{
+margin:1px;
+margin-left:auto;
+margin-right:auto;
+width:99%;
+/*border:1px dashed purple;*/
+top:-195px;
+height:18px;
+}
+
+
+.shout:hover{
+border:1px dashed white;
+background-color:#EEEEEE;
+}
+
+.shout a:link, .shout a:visited {background:transparent;text-decoration:none;}
+
+/*
+.shoutcontain{
+position:relative;
+display:block;
+border:1px solid green;
+height:99%;
+}
+
+
+#comments .simage{
+position:relative;
+height: 124px;
+width: 124px;
+top:-10px;
+left:100px;
+border:2px dotted red;
+}
+
+
+.stoggle{
+position:relative;
+height:198px;
+width:15px;
+top:-219px;
+left:199px;
+border:1px solid red;
+}
+
+.stime{
+border:1px solid blue;
+position:relative;
+top:90px;
+left:-92px;
+width:200px;
+-webkit-transform: rotate(-90deg); 
+-moz-transform: rotate(-90deg);
+z-index:100;
+}
+
+.time{
+text-align:center;
+margin:auto;
+visibility:hidden;
+}
+
+#comments .stime{
+width:124px;
+top:56px;
+left:-59px;
+height:9px;
+}
+
+#comments .time{
+}
+
+.smallest{
+font-size:10px;
+}
+
+.shoutcontain:hover .time{
+background-color:black;
+color:white;
+visibility:visible;
+}
+
+.stitle{position:relative;width:25%;margin:auto;}
+.stripcode{position:relative;width:25%;margin:auto;}
+.smisc{position:relative;width:20%;margin:auto;}
+
+.sblurbs{
+border:1px dashed purple;
+margin:1px;
+margin-left:auto;
+margin-right:auto;
+width:99%;
+}
+
+.blurbs{
+border:1px solid blue;
+margin:1px;
+margin-left:auto;
+margin-right:auto;
+width:99%;}*/
+
+/** main navigation**/
+
+.mainmenunav{
+width: 100%;
+overflow: hidden;
+margin:auto;
+}
+
+.mainmenunav ul{
+margin: 0;
+padding: 0;
+padding-left: 10px;
+list-style-type: none;
+}
+
+.mainmenunav ul li{
+display: inline;
+margin: 0;
+}
+
+.mainmenunav ul li a{
+float: left;
+display: block;
+text-decoration: none;
+margin: 0;
+padding: 7px 8px;
+}
+
+.mainmenunav ul li a:visited{
+}
+
+.mainmenunav ul li a:hover, .mainmenunav ul li.selected a{
+}

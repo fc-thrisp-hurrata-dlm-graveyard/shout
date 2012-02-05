@@ -1,0 +1,49 @@
+Shout is an imageboard-forum application in Rails3
+
+There is an admin section for creating forums located at /admin/forums (currently not authenticated in any way, shape, or form.)
+
+Suggestions and participation encouraged. Right now, this IS a mess in progress. 
+
+The original git repo was nuked and started over, see CHANGELOG for some history.
+
+
+Immediate:
+ 
+  - user and vote models
+  - session management
+  /- session based delete of items you posted
+  - reporting
+
+ 
+  
+Eventually:
+  
+  - incorporate js
+  - slicker css/html
+  - endless paging, remove pagination
+  - Clean-up collapsed Shout model
+  - AmazonS3 storage for images
+  - Freeze gif display
+  /- delete shout -- based on session info - you posted, you delete
+  /- reporting options
+  - admin sticky shout
+  - cleaner forms
+  - Admin authentication
+  - API for posting
+  - separate post / image into two models #why has this been so difficulttttt for me #ah, carrierwave has/had nested issues
+
+
+Think about:
+     
+  - cdn
+  - caching 
+  - Separate forum/shout logic from admin logic (only aliased it seems, cannot remove some methods from forum without disrupting admin/forum)
+  - Expanded admin options (list all shouts, list all images, list all comments e.g. for deletion or bans)
+  - Expanded models -- video uploads perhaps, gathering info for spam prevention/ban
+  - Tagging images, filtering (perhaps not for a simple imageboard -- tagging is there, but unused right now.)  
+  - Fix carrierwave ':auto_validation => false' model requirement (needed or it works but spews errors on image uploads)
+  - Hashing images  --> possible caching/duplicate prevention
+  - Text filtering
+  - Processing of submitted text:filters, perhaps a robot/daemon that enforces unique text, filtering out url posting
+  - Image/Shout expiration, auto clearing of folders/db
+  - Limited markup for shout text, input sanitation

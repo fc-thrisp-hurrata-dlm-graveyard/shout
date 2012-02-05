@@ -1,0 +1,19 @@
+.shout
+ -#%a{:href =>(url_for parentshout)}
+  -# = image_tag(parentshout.images.image_url(:thumb)) if parentshout.images.image_url
+ .snotimage
+  .sinfobar
+   = parentshout.id
+   = parentshout.title
+   = parentshout.thistoken
+   = parentshout.created_at.try(:strftime,"%I:%M%p %B %d")
+   - if parentshout.sesskey == session[:session_id]  
+    = link_to 'Delete', shout_path(parentshout),               |
+        :confirm => 'Are you sure?', :method => :delete   |
+  .scontent
+   = sanitize(simple_format h(parentshout.content[0..2000]+">"))
+   .sblurb
+   - parentshout.blurbchildren.each do |blurb|
+    .blurbs
+     = image_tag(blurb.images.image_url(:dthumb)) if blurb.images.image_url
+     = simple_format h(blurb.content[0..79])

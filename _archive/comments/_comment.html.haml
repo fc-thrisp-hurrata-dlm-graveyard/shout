@@ -1,0 +1,16 @@
+.shout
+ .shoutcontain
+  .stime
+   .time
+    %span.smallest
+     = shout.created_at.try(:strftime,"%I:%M%p %B %d")
+  .simage
+   = link_to image_tag(shout.image_url(:cthumb)), shout.image_url if shout.image_url
+  .snotimage
+   .sinfobar
+    .stitle
+    .stripcode
+    .smisc
+   .scontent
+    = sanitize shout.content
+

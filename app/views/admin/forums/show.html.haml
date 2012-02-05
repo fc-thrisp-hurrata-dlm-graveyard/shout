@@ -1,0 +1,13 @@
+%p#notice= notice
+= link_to 'Destroy', admin_forum_url(@forum),     |
+  :confirm => 'Are you sure?', :method => :delete |
+%p
+  %b Name:
+  = @forum.name
+%p
+  %b Description:
+  = @forum.description
+= render :partial => "shouts/shout", |
+ :collection => @forum.shouts        |
+
+

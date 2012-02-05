@@ -1,0 +1,21 @@
+%h1 Listing forums
+%p#notice= notice
+%table
+  %tr
+    %th Name
+    %th Description
+    %th
+    %th
+    %th
+  - @forums.each do |forum|
+    %tr
+      %td= forum.name
+      %td= forum.description
+      %td= forum.visibility
+      %td= forum.frozen
+      %td= link_to 'Show', forum
+      %td= link_to 'Edit', edit_admin_forum_path(forum)
+      %td= link_to 'Destroy', admin_forum_url(forum),      |
+           :confirm => 'Are you sure?', :method => :delete |
+%br/
+= link_to 'New Forum', new_admin_forum_url

@@ -1,0 +1,9 @@
+%p#notice= notice
+= render :partial => "tripcode/trip", |
+ :collection => @tripcodelist         |
+
+= form_for :tripcode,@tripcode do |f|
+ = f.password_field :password, :width => 5, :value=>""
+ .actions
+  = f.submit
+

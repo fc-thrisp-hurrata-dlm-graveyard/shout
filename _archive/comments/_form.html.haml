@@ -1,0 +1,9 @@
+= form_for ([@shout, @shout.comments.new], :html => {:multipart => true})do |f|
+  = f.error_messages
+  .field
+    = f.text_area :content, :size => "10x20"
+    %br/
+  .field
+    = f.file_field :image
+  .actions
+    = f.submit

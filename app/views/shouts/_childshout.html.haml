@@ -1,0 +1,14 @@
+.shout
+ .simage
+  = link_to image_tag(childshout.image_url(:cthumb)), childshout.image_url if childshout.image_url
+ .snotimage
+  .sinfobar
+   = childshout.id
+   = childshout.title
+   = childshout.thistoken
+   = childshout.created_at.try(:strftime,"%I:%M%p %B %d")
+   - if childshout.sesskey == session[:session_id]  
+    = link_to 'Delete', shout_path(childshout),               |
+        :confirm => 'Are you sure?', :method => :delete   |
+  .scontent
+   = sanitize (simple_format h(childshout.content))

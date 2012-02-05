@@ -1,0 +1,5 @@
+%p#notice= notice
+- @shouts.each do |shout|
+ = image_tag(shout.image_url(:cthumb)) if shout.image_url
+ -#= link_to image_tag(shout.image_url(:thumb)), shout if shout.image_url
+  

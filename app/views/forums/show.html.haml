@@ -1,0 +1,9 @@
+%p#notice= notice
+= link_to @forum.name
+%br
+.form-general
+ = render "shouts/parentform"
+.navigation-sorting-bar-reserved
+= render :partial => "shouts/parentshout", |
+ :collection => @shouts                    | 
+= will_paginate @shouts
